@@ -1,0 +1,97 @@
+/*Global styles*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+:root{
+    --primaryColor: #2e3049;
+    --secondaryColor: #00f2ff;
+}
+
+/*Heading Styles*/
+header{
+    padding: 1.5em;
+    display: flex;
+    background-color: var(--secondaryColor);
+    justify-content: space-between;
+}
+#title{
+    display: flex;
+}
+img{
+    width: 4em;
+    height: 4em;
+
+}
+h1{
+    margin-left: 0.4em;
+    margin-top: 0.8em;
+}
+#toggleTheme{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 4em;
+    border: 0.13em black solid;
+    border-radius: 1em;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    max-height: 5.5em;
+    
+}
+
+/*main section styles*/
+main{
+    background-color: var(--primaryColor);
+    padding: 0;
+}
+
+/*Input styles*/
+#input{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    background-color: #1b1f54;
+    padding: 2em;
+}
+#searchBox{
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 20em;
+    border: black 2px solid;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.searchHistory{
+    margin-bottom: 1em;
+    color: #00fbff;
+}
+#clearSearch{
+    background-color: var(--secondaryColor);
+    color: white;
+    font-size: 1em;
+    padding: 0.5em;
+    border: #1b1f54 solid 2.2px;
+    border-radius: 6px;
+}
+
+/*Game section styles*/
+#gameSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 30em;
+    color: white;
+    padding: 1em;
+}
+
+/*Footer Styles*/
+footer{
+    background-color: black;
+    padding: 1em;
+    color: white;
+    height: 4em;
+}
