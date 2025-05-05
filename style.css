@@ -82,10 +82,15 @@ main{
 /*Game section styles*/
 #gameSection{
     display: grid;
+    grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     min-height: 30em;
     color: white;
     padding: 1em;
+}
+.gameClass{
+    padding: 1em;
+    background-color: #b0b5ff;
 }
 
 /*Footer Styles*/
