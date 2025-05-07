@@ -6,10 +6,17 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 :root{
-    --primaryColor: #2e3049;
-    --secondaryColor: #00f2ff;
+    --primaryColor: #8991ff;
+    --secondaryColor: #80eff5;
+    --textColor: #000000;
+    --searchBox: #fff;
 }
-
+.dark{
+    --primaryColor: #1d215b;
+    --secondaryColor: #006c71;
+    --textColor: #fff;
+    --searchBox: #cacaca;
+}
 /*Heading Styles*/
 header{
     padding: 1.5em;
@@ -53,39 +60,41 @@ main{
     display: grid;
     grid-template-rows: 1fr;
     justify-items: center;
-    background-color: #1b1f54;
+    background-color: var(--primaryColor);
     padding: 2em;
 }
 #searchBox{
+    display: block;
     font-size: 1em;
     margin-bottom: 1em;
     padding: 0.5em;
     border-radius: 5px;
     width: 20em;
-    border: black 2px solid;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    border: --textColor 2px solid;
+    background-color: var(--searchBox);
+    color: black;
 }
 .searchHistory{
     margin-bottom: 1em;
-    color: #00fbff;
+    color: var(--textColor);
 }
 #clearSearch{
     background-color: var(--secondaryColor);
-    color: white;
+    color: var(--textColor);
     font-size: 1em;
     padding: 0.5em;
-    border: #1b1f54 solid 2.2px;
+    border: var(--textColor) solid 2.2px;
     border-radius: 6px;
 }
 
 /*Game section styles*/
 #gameSection{
+    background-color: var(--secondaryColor);
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     min-height: 30em;
-    color: white;
+    color: var(--textColor);
     padding: 1em;
 }
 .gameClass{
@@ -95,8 +104,8 @@ main{
 
 /*Footer Styles*/
 footer{
-    background-color: black;
+    background-color: var(--primaryColor);
     padding: 1em;
-    color: white;
+    color: var(--textColor);
     height: 4em;
 }

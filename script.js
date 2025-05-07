@@ -46,18 +46,3 @@ for(let i = 0; i < videosGamesList.length; i++){
 
     gameSection.appendChild(game);
 }
-/* 
-let game = videosGamesList[0];
-
-let card = document.createElement("div");
-
-let gameName = document.createElement("div");
-gameName.textContent = game.name;
-
-let gameDate = document.createElement("div");
-gameDate.textContent = game.date;
-
-card.appendChild(gameName);
-card.appendChild(gameDate);
-
-gameSection.appendChild(card); */
