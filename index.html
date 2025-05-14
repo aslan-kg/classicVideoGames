@@ -13,15 +13,15 @@
             <img src="logo.png" alt="Site icon">
         <h1>Classic Video Game Explorer</h1>
         </div>
-        
+        <div id="timerArea"></div>
         <button id="toggleTheme">Toggle Theme</button>
-        <div class="timerArea"></div>
+        
     </header>
     <main>
         <section id="input">
             <input type="text" name="search-box" id="searchBox" placeholder="Search for the classics">
             <div class="searchHistory">
-                <p>Recent Searchs:</p>
+                <p id="search-list"></p>
             </div>
             <button id="clearSearch">Clear Search History</button>
         </section>
@@ -34,8 +34,7 @@
     </footer>
 
     <script src="greet.js"></script>
-    <!--Games-->
-    <!--Render-->
+    <script src="data.js"></script>
     <script src="render.js"></script>
     <script src="theme.js"></script>
     <script src="timer.js"></script>

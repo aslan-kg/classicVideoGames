@@ -39,7 +39,7 @@ h1{
 #toggleTheme{
     padding-left: 1em;
     padding-right: 1em;
-    margin-right: 4em;
+    margin-right: 1em;
     border: 0.13em black solid;
     border-radius: 1em;
     font-size: 0.9em;
@@ -47,6 +47,11 @@ h1{
     font-weight: bold;
     max-height: 5.5em;
     
+}
+#sessionTimer{
+    font-size: 1.5em;
+    margin-top: 0.4em;
+    padding: 1em;
 }
 
 /*main section styles*/
@@ -98,10 +103,22 @@ main{
     padding: 1em;
 }
 .gameClass{
-    padding: 1em;
+    padding: 0.5em;
     background-color: #b0b5ff;
+    border: #000000 solid 2px;
 }
-
+.gameClass img{
+    min-height: 9em;
+    min-width: 8em;
+    margin-bottom: 1em;
+}
+.game-header{
+    margin: 1em;
+    padding: 1em;
+    display: grid;
+    grid-row: 1fr 1fr;
+    justify-items: center;
+}
 /*Footer Styles*/
 footer{
     background-color: var(--primaryColor);
