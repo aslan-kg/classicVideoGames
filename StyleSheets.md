@@ -1,3 +1,15 @@
+# Style Sheets documentation
+
+## Table on contents
+* Introduction
+* Script
+* Toggle Style
+
+## Introduction 
+This is the CSS used in the Classic Video Games explorer project. It changes the colors to the webpage depending on the toggle style input is set to Dark or not useing JavaScript. The CSS can organized the elements created by Javascript Dom into grid section
+
+## Script
+```CSS
 /*Global styles*/
 *{
     box-sizing: border-box;
@@ -131,3 +143,52 @@ footer{
     color: var(--textColor);
     height: 4em;
 }
+```
+## Toggle Styles
+
+The JavaScript can communicate with the CSS. It can recive the input of the toggle button or pressing the D key, then change the class list of body element to light of dark. The Javascript can also get the theme from local storage.
+```javascript
+const themeToggle = document.getElementById('toggleTheme');
+
+//load theme from localStorage
+if (localStorage.getItem('theme') === 'dark'){
+    document.body.classList.add('dark');
+}
+
+//Save theme preference to localStorage
+themeToggle.addEventListener('click', ()=>{
+    document.body.classList.toggle('dark');
+    if(document.body.classList.contains('dark')){
+        localStorage.setItem('theme', 'dark');
+    }else{
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+//Add keyboard shortcut for dark mode toggle
+document.addEventListener('keydown', function(e){
+    if(e.shiftKey && e.key === 'D'){
+        themeToggle.click();
+    }
+});    
+```
+After the Javascript sets up a light or dark variable for the HTML body. The CSS has variables in the ``` :root ``` for default and ``` .dark ``` for dark mode.
+
+```CSS
+:root{
+    --primaryColor: #8991ff;
+    --secondaryColor: #80eff5;
+    --textColor: #000000;
+    --searchBox: #fff;
+    --toggleColor: #000;
+    --toggleText: #fff;
+}
+.dark{
+    --primaryColor: #1d215b;
+    --secondaryColor: #006c71;
+    --textColor: #fff;
+    --searchBox: #cacaca;
+    --toggleColor: #fff;
+    --toggleText: #000;
+}
+```
